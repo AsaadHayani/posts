@@ -11,6 +11,7 @@ import {
   Table,
 } from "react-bootstrap";
 import MyHelmet from "../MyHelmet";
+import { toast } from "react-toastify";
 
 const Posts = () => {
   const [posts, setPosts] = useState([]);
@@ -34,6 +35,7 @@ const Posts = () => {
     try {
       await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`);
       const updatedData = posts.filter((item) => item.id !== id);
+      toast.success("Post deleted successfully");
       setPosts(updatedData);
     } catch (error) {
       console.error("Error deleting item:", error);

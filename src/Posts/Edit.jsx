@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import MyHelmet from "../MyHelmet";
+import { toast } from "react-toastify";
 
 const Edit = () => {
   const { id } = useParams();
@@ -34,6 +35,7 @@ const Edit = () => {
         body,
       });
       console.log(response.data);
+      toast.success("Post updated successfully");
       navigate(`/`);
     } catch (error) {
       console.error("Error editing post:", error);

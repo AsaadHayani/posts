@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import MyHelmet from "../MyHelmet";
+import { toast } from "react-toastify";
 
 const Add = () => {
   const [title, setTitle] = useState("");
@@ -18,6 +19,7 @@ const Add = () => {
         userId: 1,
       });
       console.log(response.data);
+      toast.success("Post created successfully");
       navigate(`/`);
     } catch (error) {
       console.error("Error creating post:", error);
