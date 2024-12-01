@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import MyHelmet from "../MyHelmet";
 
 const Details = () => {
   const { id } = useParams();
@@ -44,6 +45,7 @@ const Details = () => {
   }
   return (
     <Container className="mt-3">
+      <MyHelmet title="Detais" />
       <Card className="text-center border border-success shadow">
         <Card.Header className="text-success fs-4">{post.title}</Card.Header>
         <Card.Body>

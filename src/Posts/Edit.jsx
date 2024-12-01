@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
+import MyHelmet from "../MyHelmet";
 
 const Edit = () => {
   const { id } = useParams();
@@ -41,6 +42,7 @@ const Edit = () => {
 
   return (
     <Container>
+      <MyHelmet title="Edit" />
       <Form
         method="POST"
         className="border border-warning mx-auto mt-5 p-3 shadow w-75"

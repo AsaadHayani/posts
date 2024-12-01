@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import MyHelmet from "../MyHelmet";
 
 const Add = () => {
   const [title, setTitle] = useState("");
@@ -25,6 +26,7 @@ const Add = () => {
 
   return (
     <Container>
+      <MyHelmet title="Add" />
       <Form
         method="POST"
         className="border border-primary mx-auto mt-5 p-3 shadow w-75"
