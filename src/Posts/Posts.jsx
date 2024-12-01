@@ -140,7 +140,7 @@ const Posts = () => {
                 })
               ) : (
                 <tr>
-                  <td colSpan={5} className="text-danger fs-5">
+                  <td colSpan={6} className="text-danger fs-5">
                     The Elements is Not Found, Or Wrong
                   </td>
                 </tr>
